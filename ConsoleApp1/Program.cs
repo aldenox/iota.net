@@ -14,7 +14,6 @@ namespace ConsoleApp1
             var httpClient = new HttpClient();
             var tangleClient = new TangleClient(httpClient)
             {
-                //BaseUrl = "http://192.168.1.101:14265"
                 BaseUrl = "https://api.hornet-1.testnet.chrysalis2.com"
             };
 
