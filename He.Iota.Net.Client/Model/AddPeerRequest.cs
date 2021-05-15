@@ -1,10 +1,9 @@
-﻿namespace He.Iota.Net.Client
+﻿namespace He.Iota.Net.Client.Model
 {
     using Newtonsoft.Json;
 
     /// <summary>Adds a given peer to the node.</summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.4.1.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class AddPeerRequest
+    public class AddPeerRequest
     {
         [JsonProperty("multiAddress", Required = Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
@@ -21,8 +20,5 @@
             get { return additionalProperties; }
             set { additionalProperties = value; }
         }
-
-
     }
-
 }

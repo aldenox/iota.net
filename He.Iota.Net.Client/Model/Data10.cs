@@ -1,9 +1,8 @@
-﻿namespace He.Iota.Net.Client
+﻿namespace He.Iota.Net.Client.Model
 {
     using Newtonsoft.Json;
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.4.1.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Data10
+    public class Data10
     {
         /// <summary>The type of the address. Value `0` denotes a Ed25519 address.</summary>
         [JsonProperty("addressType", Required = Required.Always)]

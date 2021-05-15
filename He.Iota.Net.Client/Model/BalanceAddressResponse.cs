@@ -1,10 +1,9 @@
-﻿namespace He.Iota.Net.Client
+﻿namespace He.Iota.Net.Client.Model
 {
     using Newtonsoft.Json;
 
     /// <summary>Returns the balance of an address.</summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.4.1.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class BalanceAddressResponse
+    public class BalanceAddressResponse
     {
         [JsonProperty("data", Required = Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]

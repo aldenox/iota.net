@@ -1,6 +1,7 @@
 namespace He.Iota.Net.Client
 {
     using He.Iota.Net.Client.Extensions;
+    using He.Iota.Net.Client.Model;
     using Newtonsoft.Json;
     using System;
     using System.Net.Http;
@@ -201,12 +202,8 @@ namespace He.Iota.Net.Client
                     request.Method = new HttpMethod("GET");
                     request.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
 
-
-
                     var url = urlBuilder.ToString();
                     request.RequestUri = new Uri(url, UriKind.RelativeOrAbsolute);
-
-
 
                     var response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
                     var disposeResponse = true;
@@ -218,8 +215,6 @@ namespace He.Iota.Net.Client
                             foreach (var item in response.Content.Headers)
                                 headers[item.Key] = item.Value;
                         }
-
-
 
                         var status = (int)response.StatusCode;
                         if (status == 200)

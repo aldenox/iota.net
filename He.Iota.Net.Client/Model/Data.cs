@@ -1,9 +1,8 @@
-﻿namespace He.Iota.Net.Client
+﻿namespace He.Iota.Net.Client.Model
 {
     using Newtonsoft.Json;
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.4.1.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Data
+    public class Data
     {
         /// <summary>The name of the node.</summary>
         [JsonProperty("name", Required = Required.Always)]
@@ -74,8 +73,5 @@
             get { return additionalProperties; }
             set { additionalProperties = value; }
         }
-
-
     }
-
 }

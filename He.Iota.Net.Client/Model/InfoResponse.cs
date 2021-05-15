@@ -1,5 +1,6 @@
 ﻿namespace He.Iota.Net.Client
 {
+    using He.Iota.Net.Client.Model;
     using Newtonsoft.Json;
 
     /// <summary>Returns general information about the node.</summary>

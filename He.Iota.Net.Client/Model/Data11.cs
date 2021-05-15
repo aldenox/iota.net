@@ -1,9 +1,8 @@
-﻿namespace He.Iota.Net.Client
+﻿namespace He.Iota.Net.Client.Model
 {
     using Newtonsoft.Json;
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.4.1.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Data11
+    public class Data11
     {
         [JsonProperty("receipts", Required = Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
