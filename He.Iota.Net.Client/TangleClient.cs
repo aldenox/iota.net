@@ -5,6 +5,7 @@ namespace He.Iota.Net.Client
     using System.Text;
     using System.Threading.Tasks;
     using System.Net.Http;
+    using He.Iota.Net.Client.Extensions;
 
     public partial class TangleClient 
     {
@@ -339,8 +340,8 @@ namespace He.Iota.Net.Client
             var urlBuilder = new StringBuilder();
             urlBuilder.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/v1/messages");
 
-            submitMessageRequest.Payload.Index = this.StringToHex(submitMessageRequest.Payload.Index);
-            submitMessageRequest.Payload.Data = this.StringToHex(submitMessageRequest.Payload.Data);
+            submitMessageRequest.Payload.Index = submitMessageRequest.Payload.Index.ToHex();
+            submitMessageRequest.Payload.Data = submitMessageRequest.Payload.Data.ToHex();
 
             // Serialize our concrete class into a JSON String
             var stringPayload = JsonConvert.SerializeObject(submitMessageRequest);
@@ -363,18 +364,7 @@ namespace He.Iota.Net.Client
             }
         }
 
-        private string StringToHex(string source)
-        {
-            var sb = new StringBuilder();
-            var bytes = Encoding.UTF8.GetBytes(source);
 
-            foreach (var t in bytes)
-            {
-                sb.Append(t.ToString("x"));
-            }
-
-            return sb.ToString();
-        }
     
         /// <summary>Submit a message.</summary>
         /// <returns>Successful operation.</returns>
